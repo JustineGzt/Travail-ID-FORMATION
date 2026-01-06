@@ -1,3 +1,0 @@
-Notes du projet :
-- Thématiques : Questions, Devinettes, ...
-- Version web du jeu de cartes
