@@ -1,0 +1,190 @@
+/* -------------------- RESET GLOBALE -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #f5f0e6; /* beige */
+    background: linear-gradient(135deg, #1a1a40, #6a0dad); /* bleu nuit → violet */
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+/* -------------------- VARIABLES COULEURS -------------------- */
+:root {
+    --beige: #f5f0e6;
+    --bleu-nuit: #1a1a40;
+    --cuivre: #b87333;
+    --noir: #000000;
+    --violet: #6a0dad;
+    --violet-clair: #8b2ddb;
+    --ombre: rgba(0,0,0,0.4);
+}
+
+/* -------------------- HEADER -------------------- */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+}
+
+header h1 {
+    color: var(--cuivre);
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 2px 2px 5px var(--ombre);
+    margin-bottom: 0.5rem;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+    text-align: center;
+    padding: 1rem 0.5rem;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    color: var(--beige);
+}
+
+/* -------------------- LIENS GLOBAUX -------------------- */
+a {
+    color: var(--beige);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--violet-clair);
+    text-decoration: underline;
+}
+
+/* -------------------- BOUTONS GLOBAUX -------------------- */
+button, a.btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--cuivre), var(--violet));
+    color: var(--beige);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px var(--ombre);
+    transition: all 0.4s ease;
+}
+
+button:hover, a.btn:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, var(--violet), var(--cuivre));
+}
+
+/* -------------------- CONTENEUR PRINCIPAL -------------------- */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+/* -------------------- TYPOGRAPHIE -------------------- */
+h2, h3, h4 {
+    color: var(--beige);
+    text-shadow: 1px 1px 5px var(--ombre);
+    margin-bottom: 1rem;
+}
+
+/* -------------------- FORMULAIRES ET INPUTS -------------------- */
+input, select, textarea {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--cuivre);
+    background: rgba(255,255,255,0.05);
+    color: var(--beige);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--violet-clair);
+    box-shadow: 0 0 10px var(--violet-clair);
+}
+
+/* -------------------- LISTES -------------------- */
+ul, ol {
+    list-style: none;
+}
+
+/* -------------------- IMAGES -------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* -------------------- TABLES -------------------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    button, a.btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* -------------------- PETITS EFFETS -------------------- */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+html, body {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  flex: 1 0 auto;
+}
+#__vscode_live_server__ {
+  display: none !important;
+}

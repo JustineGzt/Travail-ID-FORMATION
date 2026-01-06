@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover image -> play video</title>
+    <style>
+        .main-container {
+            width: 600px;
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container holds the image and the video stacked */
+        .video-container {
+            position: relative;
+            width: 100%;
+            /* keep a consistent aspect ratio if you know it, otherwise height will follow the image */
+        }
+
+            .video-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.5s ease;
+        will-change: opacity;
+    }
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* ou cover */
+        opacity: 0; /* invisible par défaut */
+        transition: opacity 0.5s ease;
+        pointer-events: none; /* évite d’interférer avec le hover */
+    }
+
+    /* au hover / quand playing, faire apparaître la vidéo et masquer l'image */
+    .video-container.playing video {
+        opacity: 1;
+    }
+
+    .video-container.playing img {
+        opacity: 0;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="video-container" id="videoBox">
+            <img id="posterImg" src="model.png" alt="poster image">
+            <video id="hoverVideo" src="personnagemouvement2.webm" poster="model.png" preload="auto" muted playsinline></video>
+        </div>
+    </div>
+
+    <script>
+        // Behavior:
+        // - image visible by default
+        // - when the user hovers the container, the image hides and the video plays
+        // - when the video ends, the video hides and the image returns
+
+        const container = document.getElementById('videoBox');
+        const img = document.getElementById('posterImg');
+        const video = document.getElementById('hoverVideo');
+
+        // Ensure video won't show controls and is ready to play
+        video.controls = false;
+
+        // On hover (mouseenter) start the video and show it
+        container.addEventListener('mouseenter', () => {
+            // add class to switch visibility via CSS
+            container.classList.add('playing');
+
+            // restart from the beginning and play
+            try {
+                video.currentTime = 0;
+            } catch (e) {
+                // some browsers may throw if video not ready; ignore
+            }
+            // Some browsers block autoplay with sound; keep it muted so autoplay is allowed
+            video.muted = true;
+            const p = video.play();
+            if (p && p.catch) p.catch(() => {/* autoplay rejected; user may need interaction */});
+        });
+
+        // If user moves the mouse out before the video finishes we will not cancel playback
+        // because the requirement says the image returns after the end of the animation.
+
+        // When video ends, hide it and restore the image
+        video.addEventListener('ended', () => {
+            container.classList.remove('playing');
+            try { video.pause(); } catch (e) {}
+            // reset to start so next hover restarts cleanly
+            try { video.currentTime = 0; } catch (e) {}
+        });
+
+        // Optional: if the user clicks the container while video is playing, restart the video
+        container.addEventListener('click', () => {
+            if (container.classList.contains('playing')) {
+                try { video.currentTime = 0; } catch (e) {}
+                video.play();
+            }
+        });
+    </script>
+</body>
+</html>

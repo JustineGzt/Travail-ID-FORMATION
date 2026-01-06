@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 50%;
+    }
+}
+
+body{
+    font-family: "Roboto";
+}
+
+// Header
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    nav{
+        background-color: #e33131;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                list-style-type: none;
+                width: 10%;
+                a{
+                    color: #fff;
+                    display: block;
+                    font-size: 1.2rem;
+                    padding: 2vh;
+                    text-align: center;
+                    transition: all .5s;
+                    &:hover{
+                        background-color: #fff;
+                        color: #e33131;
+                    }
+                }
+            }
+        }
+    }
+    img{
+        width: 15%;
+    }
+}
+
+// section intro
+.intro{
+    padding-top: 20vh;
+    .container{
+        display: grid;
+        gap: 2rem;
+        h1{
+            color: #e33131;
+            font-size: 2rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .texte{
+            display: grid;
+            gap: 1rem;
+        }
+    }
+}
+
+// Section photos
+.photos{
+    margin-top: 5rem;
+    .container{
+        display: flex;
+        gap: 1.2rem;
+        article{
+            width: 25%;
+            .masque{
+                height: 40%;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                }
+            }
+            h4{
+                color: #e33131;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+// Footer
+footer{
+    background-color: #e33131;
+    color: #fff;
+    padding: 2vh;
+}
+
+
+//////////////////////////////// RESPONSIVE
+
+// Breakpoint 1440px
+@media screen and (max-width: 1440px){
+    .photos{
+        .container{
+            article{
+                .masque{
+                   height: 20%; 
+                }
+                p{
+                    margin-bottom: 10vh;
+                }
+            }
+        }
+    }
+}
+
+// Breakpoint 1024px
+@media screen and (max-width: 1024px){
+    .center{
+        .container{
+            width: 70%;
+        }
+    }
+    header{
+        img{
+            width: 25%;
+        }
+    }
+    .intro{
+        padding-top: 15vh;
+    }
+}
+
+// Breakpoint 960px
+@media screen and (max-width: 960px) {
+    header{
+        nav{
+            ul{
+                li{
+                    width: 15%;
+                }
+            }
+        }
+    }
+    // Section photos
+    .photos{
+        .container{
+            flex-wrap: wrap;
+            justify-content: space-between;
+            article{
+                width: calc(50% - 1.2rem);
+                .masque{
+                    height: 40%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                p{
+                    margin-bottom: 1vh;
+                }
+                h4{
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+// 600px
+@media screen and (max-width : 600px) {
+    header{
+        nav{
+            display: none;
+        }
+        #toggle{
+            position: fixed;
+            display: block;
+            width: 3vh;
+            height: .2vh;
+            top: 2vh;
+            right: 2vh;
+            cursor: pointer;
+            background-color: #e33131;
+            z-index: 999;
+            &:before, &:after{
+                content: "";
+                position: absolute;
+                display: block;
+                width: 3vh;
+                height: .2vh;
+                background-color: #e33131;
+            }
+            &:before{
+                top: -.8vh;
+            }
+            &:after{
+                top: .8vh;
+            }
+        }
+        #toggle.active{
+            background-color: transparent;
+            &::before{
+                transform: rotate(45deg);
+                top: 0;
+            }
+            &::after{
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+        #navigation{
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: .5s all;
+            background-color: #ffffffd4;
+            z-index: 998;
+            ul{
+                flex-direction: column;
+            }
+        }
+        #navigation.active{
+            right: 0;
+            ul{
+                li{
+                    display: block;
+                    margin-bottom: 2vh;
+                    width: 100%;
+                    a{
+                        color: #e33131;
+                        font-size: 1.5  rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .photos{
+        .container{
+            article{
+                margin-bottom: 5vh;
+            }
+        }
+    }
+}
+
+// 425px
+@media screen and (max-width : 425px) {
+    .center{
+        .container{
+            width: 90%;
+        }
+    }
+    header{
+        height: 30vh;
+        img{
+            width: 40%;
+        }
+    }
+    .intro{
+        padding-top: 5vh;
+    }
+    .photos{
+        .container{
+            article{
+                height: 60vh;
+                width: 100%;
+                margin-bottom: 3vh;
+                .masque{
+                    height: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+        footer .footerContainer p {
+        color: lightgrey;
+        font-size: x-small;
+    }
+}

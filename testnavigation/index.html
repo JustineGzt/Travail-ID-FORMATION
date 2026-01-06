@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio Gozet</title>
+
+  <style>
+    /* =================== RESET & BASE =================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #d2d2d2;
+      background-image: 
+        repeating-linear-gradient(to right, transparent 0 100px, #25283b22 100px 101px),
+        repeating-linear-gradient(to bottom, transparent 0 100px, #25283b22 100px 101px);
+    }
+
+    body::before {
+      position: absolute;
+      width: min(1400px, 90vw);
+      top: 10%;
+      left: 50%;
+      height: 90%;
+      transform: translateX(-50%);
+      content: '';
+      background-image: url(images/bg.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      pointer-events: none;
+    }
+
+    /* =================== SLIDER =================== */
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      --rotation: calc(var(--position) * 36deg); /* rotation pour effet éventuel */
+      transform: rotate(var(--rotation));
+      transition: transform 0.5s;
+    }
+
+    .item img {
+      width: 120px;       /* taille uniforme des mini-images */
+      height: 120px;
+      object-fit: contain; /* garde proportions */
+      display: block;
+      cursor: pointer;
+    }
+
+    /* =================== CONTENT =================== */
+    .content {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .author h2, .author p {
+      margin-bottom: 5px;
+    }
+
+    /* =================== MODEL IMAGE → VIDEO =================== */
+    .model {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      cursor: pointer;
+      margin: 30px auto;
+    }
+
+    .model-image,
+    .model-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center;
+      transition: opacity 0.35s ease;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      display: block;
+      will-change: opacity, transform;
+    }
+
+    /* image visible par défaut */
+    .model-image { z-index: 2; opacity: 1; }
+
+    /* vidéo prête mais invisible au départ */
+    .model-video { z-index: 3; opacity: 0; pointer-events: none; }
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    
+    <!-- =================== SLIDER =================== -->
+    <div class="slider" style="--quantity: 10">
+      <div class="item" style="--position: 1"><img src="images/3.png" alt="" /></div>
+      <div class="item" style="--position: 2"><img src="images/1.png" alt="" /></div>
+      <div class="item" style="--position: 3"><img src="images/6.png" alt="" /></div>
+      <div class="item to-slider1" style="--position: 4"><img src="images/13.png" alt="" /></div>
+      <div class="item" style="--position: 5"><img src="images/4.png" alt="" /></div>
+      <div class="item to-jeux" style="--position: 6"><img src="images/game.png" alt="Mini-jeux" /></div>
+      <div class="item" style="--position: 7"><img src="images/11.png" alt="" /></div>
+      <div class="item to-logo" style="--position: 8"><img src="images/Black and white minimalist jewelry logo.png" alt="" /></div>
+      <div class="item" style="--position: 9"><img src="images/14.png" alt="" /></div>
+      <div class="item to-index" style="--position: 10"><img src="images/Openclassroom1.png" alt="" /></div>
+    </div>
+
+    <!-- =================== CONTENT =================== -->
+    <div class="content">
+      <h1 data-content="NAVIGATION">NAVIGATION</h1>
+      <div class="author">
+        <h2>Gozet</h2>
+        <p><b>Développeur Web</b></p>
+        <p><b>Design</b></p>
+      </div>
+
+      <!-- =================== MODEL IMAGE → VIDEO =================== -->
+        <div class="model">
+          <img src="model.png" alt="modèle" class="model-image" />
+          <video class="model-video" muted playsinline preload="auto" loop>
+            <source src="personnagemouvement-unscreen-ezgif.com-gif-to-webm-converter.webm" type="video/webm">
+            <!-- fallback -->
+          </video>
+        </div>
+
+      <!-- ========================================================== -->
+    </div>
+  </div>
+
+  <!-- =================== SCRIPT =================== -->
+  <script>
+    /* =================== REDIRECTION SLIDER =================== */
+    document.querySelector('.to-jeux').addEventListener('click', () => {
+      window.location.href = 'jeu/jv.html';
+    });
+
+    document.querySelector('.to-index').addEventListener('click', () => {
+      window.location.href = 'Dev/index.html';
+    });
+
+    document.querySelector('.to-slider1').addEventListener('click', () => {
+      window.location.href = 'test/slider_1-main/index.html';
+    });
+
+    document.querySelector('.to-logo').addEventListener('click', () => {
+      window.location.href = 'logo/logo.html';
+    });
+
+    /* =================== IMAGE → VIDEO =================== */
+    const model = document.querySelector('.model');
+    if (model) {
+      const img = model.querySelector('.model-image');
+      const video = model.querySelector('.model-video');
+
+      if (!video) console.warn('Aucune vidéo trouvée dans .model');
+
+      if (video) {
+        // forcer styles identiques au cas où style.css interfère
+        [img, video].forEach(el => {
+          if (!el) return;
+          el.style.position = 'absolute';
+          el.style.top = '0';
+          el.style.left = '0';
+          el.style.width = '100%';
+          el.style.height = '100%';
+          el.style.objectFit = 'cover';
+        });
+
+        // enlever attributs width/height éventuels de l'img
+        if (img) { img.removeAttribute('width'); img.removeAttribute('height'); }
+
+        // debug : afficher tailles au chargement et au hover
+        const logSizes = () => {
+          if (!img || !video) return;
+          console.log('img rect:', img.getBoundingClientRect());
+          console.log('video rect:', video.getBoundingClientRect());
+        };
+        window.addEventListener('load', logSizes);
+        window.addEventListener('resize', logSizes);
+
+        video.muted = true;
+        video.load();
+
+        video.addEventListener('error', e => console.error('Video load error:', e));
+        video.addEventListener('loadeddata', () => {
+          console.log('Video ready:', video.currentSrc || video.src);
+          logSizes();
+        });
+
+        model.addEventListener('mouseenter', () => {
+          // s'assurer que le hover se déclenche sur le container
+          video.currentTime = 0;
+          video.play().catch(err => console.warn('play() blocked:', err));
+          video.style.opacity = '1';
+          if (img) img.style.opacity = '0';
+          logSizes();
+        });
+
+        model.addEventListener('mouseleave', () => {
+          video.pause();
+          video.style.opacity = '0';
+          if (img) img.style.opacity = '1';
+          logSizes();
+        });
+      }
+    } else {
+      console.warn('.model element not found');
+    }
+  </script>
+</body>
+</html>

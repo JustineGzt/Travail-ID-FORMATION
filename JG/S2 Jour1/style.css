@@ -1,0 +1,40 @@
+progress {
+  width: 230px;
+  height: 10px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Chrome, Safari, Edge */
+
+progress.green::-webkit-progress-bar {
+  background-color: #f3f3f3;
+}
+progress.green::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+
+
+progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 10px; /* arrondir la partie remplie */
+}
+
+progress::-webkit-progress-values {
+  background-color: #2247c2;
+  border-radius: 10px; /* arrondir la partie remplie */
+}
+
+/* Firefox */
+progress.green::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+progress.blue::-moz-progress-bar {
+   background-color: #2247c2;
+  border-radius: 10px;
+   
+}

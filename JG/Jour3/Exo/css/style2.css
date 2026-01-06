@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    background-color: #FFBF9B;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* MAIN */
+main {
+    margin: 0 auto;
+    background-color: #FFBF9B;
+}
+
+main img{
+    width: -webkit-fill-available;
+}
+
+/* header */
+main header {
+    height: 50px;
+    width: auto;
+    background-color: #B46060
+}
+
+main header h1{
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+main section{
+    margin: 50px 150px 0 150px;
+}
+
+
+main nav ul{
+    font-size: 0;
+}
+
+main nav ul li{
+    display: inline-block;
+    width: 25%;
+    font-size: 16px;
+}
+
+main nav ul li a{
+    background-color: #B46060;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+main #Fond{
+    background-color: #FFF4E0;
+    padding: 15px;
+}
+
+main section #pp{
+    background-color: #FFF4E0;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+main section #pp p{
+    color: black;
+    margin-top: 15px;
+}
+
+
+main section article{
+    background-color: #4D4D4D;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+
+main section article .info1{
+    display: flex;
+    flex-direction: row;
+}
+
+main section article .align1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+
+
+/* main section article img{
+    width: 200px;
+} */
+
+main section article h4{
+    color: #B46060;
+    font-size: x-large;
+    font-family: system-ui;
+}
+
+main section article #p1{
+    color: #B46060;
+}
+
+main section article p{
+    color: white;
+    margin-top: 15px;
+}
+
+main section article h2{
+    padding-left: 15px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-size: x-large;
+    line-height: 40px;
+    border-top: 5px solid #B46060;
+}
+
+
+main button {
+    background-color: #B46060;
+    color: white;
+    border: 1px solid #B46060;
+    margin-top: 10px;
+    width: 155px;
+    height: 35px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+main footer{
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    background-color: #B46060;
+    margin: 0px 150px 0px 150px;
+}

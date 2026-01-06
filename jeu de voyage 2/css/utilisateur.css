@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* -----------------------------------------------------
+   GLOBAL
+----------------------------------------------------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #061026;
+  color: #b9b9b9;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* -----------------------------------------------------
+   NAVIGATION
+----------------------------------------------------- */
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #1e2a46;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #b3b3b3;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.navigation a:hover {
+  background: #e3e3ef;
+}
+
+/* -----------------------------------------------------
+   TITRE
+----------------------------------------------------- */
+h1 {
+  text-align: center;
+  margin: 10px 0 25px;
+}
+
+/* -----------------------------------------------------
+   CARDS (boites)
+----------------------------------------------------- */
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+/* -----------------------------------------------------
+   AVATAR
+----------------------------------------------------- */
+.avatar {
+  background: #2e374b;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+/* -----------------------------------------------------
+   INFORMATIONS UTILISATEUR
+----------------------------------------------------- */
+.user-info h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.user-info p {
+  font-size: 15px;
+  margin: 6px 0;
+}
+
+/* -----------------------------------------------------
+   STATISTIQUES
+----------------------------------------------------- */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.stats div {
+  flex: 1;
+  min-width: 180px;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.05);
+}
+
+.stats div span {
+  font-weight: bold;
+  color: #4a52ff;
+}
+
+/* -----------------------------------------------------
+    ACCORDEON
+----------------------------------------------------- */
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.accordion .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+.accordion .accordion-header h3 {
+  margin: 0;
+}
+.accordion .accordion-header .toggle {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+.accordion .accordion-content {
+  display: none;
+  padding: 15px;
+  background: #fff;
+}
+.accordion .accordion-content p {
+  margin: 0 0 5px;
+}
+.accordion.open .accordion-content {
+  display: block;
+}
+.accordion.open .toggle {
+  transform: rotate(180deg);
+}
+
+/* -----------------------------------------------------
+   LISTES / HISTORIQUE
+----------------------------------------------------- */
+#gameHistory,
+#categoriesPlayed {
+  list-style: none;
+  padding: 0;
+}
+
+#gameHistory li,
+#categoriesPlayed li {
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 6px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#categoriesPlayed span {
+  color: #4a52ff;
+  font-weight: bold;
+}
+
+/* -----------------------------------------------------
+   PARAMÈTRES
+----------------------------------------------------- */
+.Parametres {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Parametres h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Grille pour paramètres */
+.Parametres-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.Parametres label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.Parametres select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-top: 5px;
+}
+
+/* -----------------------------------------------------
+   BUTTONS
+----------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: #4a52ff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #353dd9;
+}/*# sourceMappingURL=utilisateur.css.map */

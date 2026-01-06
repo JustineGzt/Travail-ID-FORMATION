@@ -1,0 +1,27 @@
+{
+  "name": "profiles-frontend",
+  "version": "1.0.0",
+  "description": "A frontend application for managing profiles.",
+  "main": "src/scripts/main.js",
+  "scripts": {
+    "build": "npm run build",
+    "start": "npm run server",
+    "server": "live-server src",
+    "build:css": "sass src/styles/main.scss src/styles/main.css",
+    "watch:css": "sass --watch src/styles/main.scss:src/styles/main.css"
+  },
+  "author": "KIba",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.32.0",
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  },
+  "keywords": [
+    "profiles",
+    "frontend",
+    "web"
+  ]
+}

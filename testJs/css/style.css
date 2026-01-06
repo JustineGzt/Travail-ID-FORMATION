@@ -1,0 +1,32 @@
+body {
+      font-family: monospace;
+      text-align: center;
+      margin-top: 40px;
+      background-color: #f0f0f0;
+    }
+    #motAffiche {
+      font-size: 32px;
+      letter-spacing: 10px;
+    }
+    #lettres {
+      margin-top: 20px;
+    }
+    button {
+      margin: 3px;
+      padding: 8px 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #4a6cf7;
+      color: white;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    #resultat {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }

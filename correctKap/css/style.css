@@ -1,0 +1,322 @@
+/* Font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a{
+    color: #fff;
+}
+
+h2{
+    font-size: 6rem;    
+    text-transform: uppercase;
+}
+
+span{
+    color: red;
+}
+
+.marge{
+    padding: 5vh 10vh;
+}
+
+.line{
+    height: .1vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+body{
+    font-family: "Roboto";
+}
+
+/* Navbar */
+main .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+main .navbar h1{
+    font-size: 3rem;
+    display: flex;
+    align-items: flex-end;
+    width: 60%;
+}
+
+main .navbar h1 span{
+    width: 1vh;
+    height: 1vh;
+    background-color: red;
+    display: block;
+    margin: 0 0 1vh 1vh;
+}
+
+main .navbar nav{
+    width: 40%;
+}
+
+main .navbar nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .navbar nav ul li{
+    font-size: 1.2rem;
+}
+
+/* Header */
+header{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header .headerContainer{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin-top: 5vh;
+}
+
+header p{
+    font-size: 1.7rem;
+    width: 20%;
+}
+
+/* Section Shop */
+.shop .shopHeader{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.shop .line{
+    background-color: #000;
+    margin: 3vh 0 10vh 0;
+}
+
+.shop .shopHeader h3{
+    font-size: 2rem;
+}
+
+.shop .shopHeader p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.shop .shopImage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop .shopImage img{
+    width: 25%;
+}
+
+.shop .shopImage img.image{
+    width: 40%;
+}
+
+/* Section banner */
+.banner{
+    background-image: url(../img/about-us.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.banner h2{
+    width: 40%;
+    margin: 8vh 0;
+}
+
+/* Section Work in progress */
+.workInProgress{
+    display: flex;
+}
+
+.workInProgress img{
+    width: 50%;
+}
+
+.workInProgress .workInProgressContainer{
+    padding: 10vh 5vh;
+    width: 50%;
+}
+
+.workInProgress .workInProgressContainer h3{
+    font-size: 5rem;
+    margin-bottom: 10vh;
+}
+
+.workInProgress .workInProgressContainer p{
+    font-size: 1.4rem;
+    margin: 2vh 0;
+}
+
+/* Section Collection */
+.collection{
+    background-image: url(../img/best-collection.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15vh;
+}
+
+.collection h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.collection .collectionContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 10vh;
+}
+
+.collection .collectionContainer article{
+    background-color: #fff;
+    color: #000;
+    width: 30%;
+    padding: 8vh 3vh;
+}
+
+/* Section expert */
+.expert{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20vh  10vh;
+}
+
+.expert h4{
+    font-size: 1.5rem;
+    font-weight: 400;    
+}
+
+.expert h4 span{
+    font-size: 2rem;
+    font-weight: 600; 
+}
+
+.expert p{
+    width: 25%;
+    margin: 2vh 0;
+}
+
+.expert .expertContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15vh;
+}
+
+.expert .expertContainer img{
+    width: 23%;
+    display: block;
+}
+
+/* footer */
+footer{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0;
+}
+
+/* J'ai mis SVG car mes icons <i> sont convertis en SVG dans le code */
+footer svg{
+    stroke: lightgrey;
+    margin-right: 2vh;
+}
+
+footer .footerContainer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footerContainer .line{
+    height: .3vh;
+    background-color: red;
+    width: 8vh; 
+    margin-bottom: 3vh;
+}
+
+footer .footerContainer .about{
+    width: 40%;
+}
+
+footer .footerContainer .about .socialMedia{
+    margin-top: 4vh;
+}
+
+footer .footerContainer .link nav ul li{
+    margin-bottom: 1.3vh;
+}
+
+footer .footerContainer .link nav ul li a{
+    color: lightgray;
+}
+
+.footerContainer p{
+    color: lightgrey;
+}
+
+footer h5{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: .5vh;
+}
+
+footer .footerContainer .info .infoContainer .adress{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2vh;
+}
+
+footer .footerContainer .info .infoContainer .phone{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2vh;
+}
+
+footer .footerContainer .info .infoContainer .mail{
+    display: flex;
+    align-items: flex-start;
+}
+
+footer p.copyright{
+    color: red;
+    margin-top: 10vh;
+    font-size: .9rem;
+}

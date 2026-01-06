@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "Qu'est-ce qui est toujours devant vous mais qu'on ne peut jamais voir ?",
+    "reponse": "Le futur"
+  },
+  {
+    "id": 2,
+    "question": "Je suis toujours en mouvement mais je ne pars jamais. Qui suis-je ?",
+    "reponse": "Une horloge"
+  },
+  {
+    "id": 3,
+    "question": "Je peux être cassé sans être tenu, qu'est-ce que je suis ?",
+    "reponse": "Une promesse"
+  },
+  {
+    "id": 4,
+    "question": "Qu'est-ce qui a des clés mais ne peut pas ouvrir de portes ?",
+    "reponse": "Un piano"
+  },
+  {
+    "id": 5,
+    "question": "Je monte mais je ne descends jamais. Qui suis-je ?",
+    "reponse": "L’âge"
+  },
+  {
+    "id": 6,
+    "question": "Plus je sèche, plus je deviens mouillé. Qui suis-je ?",
+    "reponse": "Une serviette"
+  },
+  {
+    "id": 7,
+    "question": "Qu'est-ce qui appartient à vous mais que les autres utilisent plus que vous ?",
+    "reponse": "Votre nom"
+  },
+  {
+    "id": 8,
+    "question": "Qu'est-ce qui peut remplir une pièce sans prendre de place ?",
+    "reponse": "La lumière"
+  },
+  {
+    "id": 9,
+    "question": "Je commence la nuit et termine le matin. Qui suis-je ?",
+    "reponse": "L’étoile du matin"
+  },
+  {
+    "id": 10,
+    "question": "Qu'est-ce qui a un cou mais pas de tête ?",
+    "reponse": "Une bouteille"
+  },
+  {
+    "id": 11,
+    "question": "Qu'est-ce qui a des branches mais pas de fruits, pas de feuilles, ni d’écorce ?",
+    "reponse": "Une banque"
+  },
+  {
+    "id": 12,
+    "question": "Plus vous en prenez, plus vous en laissez derrière vous. Qui suis-je ?",
+    "reponse": "Des pas"
+  },
+  {
+    "id": 13,
+    "question": "Qu'est-ce qui est léger comme une plume mais personne ne peut le tenir longtemps ?",
+    "reponse": "Le souffle"
+  },
+  {
+    "id": 14,
+    "question": "Je peux voyager autour du monde sans bouger. Qui suis-je ?",
+    "reponse": "Un timbre"
+  },
+  {
+    "id": 15,
+    "question": "Qu'est-ce qui a une tête et un pied mais pas de corps ?",
+    "reponse": "Un lit"
+  },
+  {
+    "id": 16,
+    "question": "Je tombe mais je ne me blesse jamais. Qui suis-je ?",
+    "reponse": "La pluie"
+  },
+  {
+    "id": 17,
+    "question": "Je peux être cassé mais je ne tombe jamais. Qui suis-je ?",
+    "reponse": "Le cœur"
+  },
+  {
+    "id": 18,
+    "question": "Qu'est-ce qui monte et descend mais reste toujours au même endroit ?",
+    "reponse": "Un escalier"
+  },
+  {
+    "id": 19,
+    "question": "Plus vous en retirez, plus je deviens grand. Qui suis-je ?",
+    "reponse": "Un trou"
+  },
+  {
+    "id": 20,
+    "question": "Je parle sans bouche et j’entends sans oreilles. Qui suis-je ?",
+    "reponse": "Un écho"
+  }
+]

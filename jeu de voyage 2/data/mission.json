@@ -1,0 +1,20 @@
+[
+  {
+    "titre": "Explore la forêt",
+    "description": "Pars explorer une forêt pendant 30 minutes.",
+    "categorie": "aventure",
+    "type": "Aventure"
+  },
+  {
+    "titre": "50 pompes",
+    "description": "Fais 50 pompes aujourd'hui.",
+    "categorie": "sport",
+    "type": "Sport"
+  },
+  {
+    "titre": "Méditation",
+    "description": "Fais 10 minutes de méditation.",
+    "categorie": "bien-être",
+    "type": "Bien-être"
+  }
+]

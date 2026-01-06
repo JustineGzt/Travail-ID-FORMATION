@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #000000;
+}
+
+header h1{
+    color: white;
+}
+
+header nav{
+    
+}
+
+header nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li{
+
+}
+
+header nav ul li a{
+
+}
+
+
+main img{
+    object-fit: cover;
+    height: 345px;
+    width: 100%;
+}
+
+main h2{
+
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: #ffffff;
+}
+
+main .shop{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}

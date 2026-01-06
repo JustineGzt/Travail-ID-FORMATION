@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Univers de Missions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./scss/mission.css">
+</head>
+<body>
+    <header>
+        <button id="btn-accueil" ><i class="fa fa-arrow-left"></i> Retour</button>
+        <h1>🌌 Missions</h1>
+        <p>Tire une mission et relève ton défi du jour !</p>
+    </header>
+
+    <main>
+        <div id="page-container">
+            <!-- Colonne gauche -->
+            <div class="action-column" id="left-actions">
+                <h2>Actions importantes</h2>
+                <button>Mission bonus</button>
+                <button>Valider toutes missions</button>
+                <button>Voir profil</button>
+                <button>Réinitialiser missions</button>
+                <button>Mini-challenge</button>
+            </div>
+
+            <!-- Bloc central -->
+            <div id="mission-central">
+                <div id="categorie-nav" class="mini-nav"></div>
+                <div id="cartes-wrapper"></div>
+            </div>
+
+            <!-- Colonne droite -->
+            <div class="action-column" id="right-actions">
+                <h2>Actions sociales</h2>
+                <button id="invite">Inviter quelqu’un</button>
+                <button id="help">Proposer ton aide</button>
+                <button id="message">Envoyer un message</button>
+                <button id="activity">Organiser une activité</button>
+                <button id="share">Partager un moment</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 - Univers mystique des missions ✨</p>
+    </footer>
+
+    <script type="module" src="./js/mission-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription 2025 - Jeu de Cartes Mystique</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Inscription 2025</h1>
+
+            <!-- Bloc Email / Mot de passe -->
+            <form id="registerForm">
+                <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Mot de passe" required>
+                <input type="password" id="confirmPassword" placeholder="Confirmer mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+
+            <p class="message">Déjà un compte ? <a href="login.html">Se connecter</a></p>
+
+            <!-- Bloc alternatives -->
+            <div class="alt-login">
+                <p>Ou s'inscrire avec :</p>
+                <div class="social-buttons">
+                    <button class="google">Google</button>
+                    <button class="discord">Discord</button>
+                    <button class="phone">Téléphone</button>
+                    <button class="guest">Invité</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js">
+        const discordBtn = document.querySelector('.discord');
+
+        discordBtn.addEventListener('click', () => {
+            const clientId = "TON_CLIENT_ID";
+            const redirectUri = encodeURIComponent("http://localhost:3000/discord/callback");
+            const scope = "identify email";
+            const discordAuthUrl = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=${scope}`;
+            window.location.href = discordAuthUrl;
+        });
+
+    </script>
+</body>
+</html>

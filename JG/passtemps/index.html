@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maquettes UI/UX</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #121212;
+    color: #f5f5f5;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #8a4ebd;
+    margin-bottom: 50px;
+  }
+
+  /* Galerie */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; /* Nécessaire pour le mouvement */
+  }
+
+  .card:hover {
+    transform: translateY(-10px) rotate(0deg);
+    box-shadow: 0 10px 30px rgba(138,78,189,0.5);
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+  }
+
+  .card .info {
+    padding: 15px;
+  }
+
+  .card .info h3 {
+    margin: 0 0 5px 0;
+    color: #f0c674;
+    font-size: 18px;
+  }
+
+  .card .info p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+  }
+
+  /* Popup */
+  .popup {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(18,18,18,0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .popup-content {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+  }
+
+  .popup-content h2 {
+    margin-top: 0;
+    color: #8a4ebd;
+  }
+
+  .popup-content p {
+    color: #f5f5f5;
+  }
+
+  .popup-content img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 10px;
+  }
+
+  .close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+    color: #8a4ebd;
+  }
+
+  /* Animation flottante subtile */
+  @keyframes floatRotate {
+    0% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(1deg); }
+    50% { transform: translateY(0px) rotate(0deg); }
+    75% { transform: translateY(5px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+
+  .float {
+    animation: floatRotate 5s ease-in-out infinite;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Maquettes UI/UX</h1>
+
+  <div class="gallery">
+    <div class="card float" data-title="Application mobile" data-desc="Concept d’application mobile pour gestion de tâches." data-img="https://via.placeholder.com/800x500?text=Maquette+1">
+      <img src="https://via.placeholder.com/400x250?text=Maquette+1" alt="Maquette 1">
+      <div class="info">
+        <h3>Application mobile</h3>
+        <p>Canvas</p>
+      </div>
+    </div>
+
+    <div class="card float" data-title="Dashboard admin" data-desc="Prototype de dashboard admin pour site web." data-img="https://via.placeholder.com/800x500?text=Maquette+2">
+      <img src="https://via.placeholder.com/400x250?text=Maquette+2" alt="Maquette 2">
+      <div class="info">
+        <h3>Dashboard admin</h3>
+        <p>Figma</p>
+      </div>
+    </div>
+
+    <div class="card float" data-title="Landing page" data-desc="Concept de landing page pour produit digital." data-img="https://via.placeholder.com/800x500?text=Maquette+3">
+      <img src="https://via.placeholder.com/400x250?text=Maquette+3" alt="Maquette 3">
+      <div class="info">
+        <h3>Landing page</h3>
+        <p>Photoshop</p>
+      </div>
+    </div>
+
+    <div class="card float" data-title="Site e-commerce" data-desc="Prototype de page produit et panier pour e-commerce." data-img="https://via.placeholder.com/800x500?text=Maquette+4">
+      <img src="https://via.placeholder.com/400x250?text=Maquette+4" alt="Maquette 4">
+      <div class="info">
+        <h3>Site e-commerce</h3>
+        <p>Figma</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-popup" id="close-popup">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-desc"></p>
+    <img id="popup-img" src="" alt="">
+  </div>
+</div>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+  const popup = document.getElementById('popup');
+  const popupTitle = document.getElementById('popup-title');
+  const popupDesc = document.getElementById('popup-desc');
+  const popupImg = document.getElementById('popup-img');
+  const closePopup = document.getElementById('close-popup');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      popup.style.display = 'flex';
+      popupTitle.textContent = card.dataset.title;
+      popupDesc.textContent = card.dataset.desc;
+      popupImg.src = card.dataset.img;
+    });
+  });
+
+  closePopup.addEventListener('click', () => popup.style.display='none');
+  window.addEventListener('click', e => { if(e.target==popup) popup.style.display='none'; });
+
+  // Rotation aléatoire légère à chaque carte
+  cards.forEach(card => {
+    const randomDelay = Math.random() * 2; // délai initial aléatoire
+    const randomDuration = 4 + Math.random() * 2; // durée 4-6s
+    card.style.animationDelay = `${randomDelay}s`;
+    card.style.animationDuration = `${randomDuration}s`;
+  });
+</script>
+
+</body>
+</html>

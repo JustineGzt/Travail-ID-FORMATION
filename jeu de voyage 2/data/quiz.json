@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale de la France ?",
+    "options": ["Paris", "Lyon", "Marseille", "Nice"],
+    "reponse": "Paris"
+  },
+  {
+    "id": 2,
+    "question": "Quel est l’élément chimique dont le symbole est O ?",
+    "options": ["Or", "Oxygène", "Osmium", "Ozone"],
+    "reponse": "Oxygène"
+  },
+  {
+    "id": 3,
+    "question": "Qui a peint la Joconde ?",
+    "options": ["Vincent Van Gogh", "Claude Monet", "Leonardo da Vinci", "Pablo Picasso"],
+    "reponse": "Leonardo da Vinci"
+  },
+  {
+    "id": 4,
+    "question": "Quelle planète est connue comme la planète rouge ?",
+    "options": ["Mars", "Venus", "Jupiter", "Saturne"],
+    "reponse": "Mars"
+  },
+  {
+    "id": 5,
+    "question": "Quel est le plus grand océan du monde ?",
+    "options": ["Atlantique", "Indien", "Arctique", "Pacifique"],
+    "reponse": "Pacifique"
+  },
+  {
+    "id": 6,
+    "question": "Combien de continents y a-t-il sur Terre ?",
+    "options": ["5", "6", "7", "8"],
+    "reponse": "7"
+  },
+  {
+    "id": 7,
+    "question": "Quel animal est le roi de la jungle ?",
+    "options": ["Tigre", "Lion", "Éléphant", "Panthère"],
+    "reponse": "Lion"
+  },
+  {
+    "id": 8,
+    "question": "Quel est le sport le plus pratiqué au monde ?",
+    "options": ["Basketball", "Football", "Tennis", "Cricket"],
+    "reponse": "Football"
+  },
+  {
+    "id": 9,
+    "question": "Qui a écrit 'Les Misérables' ?",
+    "options": ["Victor Hugo", "Émile Zola", "Albert Camus", "Gustave Flaubert"],
+    "reponse": "Victor Hugo"
+  },
+  {
+    "id": 10,
+    "question": "Quelle est la langue la plus parlée dans le monde ?",
+    "options": ["Anglais", "Mandarin", "Espagnol", "Français"],
+    "reponse": "Mandarin"
+  },
+  {
+    "id": 11,
+    "question": "Quelle est la monnaie utilisée au Japon ?",
+    "options": ["Yen", "Dollar", "Euro", "Won"],
+    "reponse": "Yen"
+  },
+  {
+    "id": 12,
+    "question": "Quel est l’organe principal de la circulation sanguine ?",
+    "options": ["Cœur", "Poumon", "Foie", "Rein"],
+    "reponse": "Cœur"
+  },
+  {
+    "id": 13,
+    "question": "Combien de couleurs y a-t-il dans un arc-en-ciel ?",
+    "options": ["5", "6", "7", "8"],
+    "reponse": "7"
+  },
+  {
+    "id": 14,
+    "question": "Qui a découvert l’Amérique en 1492 ?",
+    "options": ["Vasco de Gama", "Christophe Colomb", "Marco Polo", "Ferdinand Magellan"],
+    "reponse": "Christophe Colomb"
+  },
+  {
+    "id": 15,
+    "question": "Quel gaz les plantes absorbent-elles pour la photosynthèse ?",
+    "options": ["Oxygène", "Azote", "Dioxyde de carbone", "Hydrogène"],
+    "reponse": "Dioxyde de carbone"
+  },
+  {
+    "id": 16,
+    "question": "Quel est le plus grand mammifère terrestre ?",
+    "options": ["Éléphant d’Afrique", "Baleine bleue", "Girafe", "Rhinocéros"],
+    "reponse": "Éléphant d’Afrique"
+  },
+  {
+    "id": 17,
+    "question": "Quel est l’instrument de musique avec 88 touches ?",
+    "options": ["Piano", "Guitare", "Orgue", "Violon"],
+    "reponse": "Piano"
+  },
+  {
+    "id": 18,
+    "question": "Quelle ville est surnommée 'la ville lumière' ?",
+    "options": ["Paris", "New York", "Tokyo", "Londres"],
+    "reponse": "Paris"
+  },
+  {
+    "id": 19,
+    "question": "Quel métal est liquide à température ambiante ?",
+    "options": ["Mercure", "Plomb", "Fer", "Aluminium"],
+    "reponse": "Mercure"
+  },
+  {
+    "id": 20,
+    "question": "Quel est le plus petit état du monde ?",
+    "options": ["Monaco", "Vatican", "San Marin", "Liechtenstein"],
+    "reponse": "Vatican"
+  }
+]

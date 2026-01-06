@@ -1,0 +1,31 @@
+@use 'variables' as vars;
+@use 'mixins';
+@use 'base';
+@use 'pages/profiles';
+
+// Global styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: vars.$bg;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: vars.$text;
+}
+
+a {
+  color: vars.$accent;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Structure d'une page HTML</h1>
+    <h2>Les balises de base</h2>
+
+    <p>Voici les éléments indispensable d'une page HTML : </p>
+    <ol>
+        <li> &lt;!DOCTYPE html&gt; : indique le type de document</li>
+        <li>&lt;html&gt; : racine du document</li>
+        <li>&lt;head&gt; : contient les métadonnées</li>
+        <li>&lt;body&gt; : contient le contenu visible</li>
+    </ol>
+
+    <h2>Les balises de texte</h2>
+    <p>Les balises de texte serbent à organiser et hiérarchiser le contenu :</p>
+
+    <ul>
+        <li>&lt;h1&gt; à &lt;h6&gt; : titres.</li>
+        <li>&lt;p&gt; : paragraphe.</li>
+        <li>&lt;strong&gt; et &lt;em&gt; mise en valeur du texte.</li>
+        <li>&lt;a&gt; : lien hypertexte.</li>
+    </ul>
+
+    <hr>
+
+    <p>Tu peux me contavter via le formulaire ci-dessous :</p>
+
+    <h3>Formulaire d'inscription</h3>
+
+        <form action="/submit" method="post">
+  <!-- Single-line text input -->
+  <label for="username">Nom:</label> <br>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    placeholder="Ton nom"
+  />
+  <br>
+  <!-- Email input -->
+  <label for="email">Email:</label> <br>
+  <input type="email" id="email" name="email" placeholder="ton email@example.com" /> <br>
+
+  <!-- Multiline text input -->
+  <label for="comments">Message:</label> <br>
+  <textarea
+    id="comments"
+    name="comments"
+    rows="4"
+    cols="50"
+    placeholder="Ton message..."
+  ></textarea> 
+  <br>
+   <br>
+  <button>Envoyer</button>
+</form>
+
+<p>© 2025 - Site d'apprentissage du HTML</p>
+<p>Ressources utiles <a href="">MDN HTML | W3Schools</a></p>
+
+
+<h3>Découverte du HTML</h3>
+<p>Un mini-site pour comprendre les balises essentielles du langage HTML</p>
+
+<ul>
+    <li><a href="">Introduction</a></li>
+    <li><a href="">Structure</a></li>
+    <li><a href="">Contact</a></li>
+</ul>
+
+<h3>Qu'est ce que le HTML</h3>
+
+<p>Le <strong>HTML</strong> (hyperText Markup langage) est le langage standard pour créer des pages web. Il utilise un système de balises pour Structurer le contenu (titres,paragraphes, images, liens, etc.)</p>
+
+<img src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Image externe">
+<p>Exemple de structure HTML simple</p>
+</body>
+</html>

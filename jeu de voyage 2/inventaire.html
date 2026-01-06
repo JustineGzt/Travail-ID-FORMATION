@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventaire des Cartes</title>
+  <link rel="stylesheet" href="css/inventaire.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Inventaire des Cartes</h1>
+    <a href="index.html" class="btn-retour">⬅ Retour au jeu</a>
+  </header>
+
+  <main class="inventaire-container">
+
+    <section class="inventaire-section">
+      <h2>🃏 Cartes en attente</h2>
+      <div class="cartes-liste" id="cartes-en-attente">
+        <!-- Cartes marquées "plus tard" -->
+      </div>
+    </section>
+
+    <section class="inventaire-section">
+      <h2>✅ Cartes terminées</h2>
+      <div class="cartes-liste" id="cartes-terminees">
+        <!-- Cartes validées -->
+      </div>
+    </section>
+
+    <section class="inventaire-section">
+      <h2>✨ Défis et Créations</h2>
+      <div class="cartes-liste" id="cartes-creatives">
+        <!-- Cartes défi ou créatives -->
+      </div>
+    </section>
+
+  </main>
+  <script src="js/cartesLib.js"></script>
+  <script src="js/inventaire.js"></script>
+</body>
+</html>

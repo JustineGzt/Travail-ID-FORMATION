@@ -1,0 +1,75 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.header h1 {
+  font-size: 1.8rem;
+  color: #e0c3fc;
+}
+.header .btn-retour {
+  background: #e0c3fc;
+  color: #1a1a2e;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.header .btn-retour:hover {
+  background: #c29ff7;
+  transform: scale(1.05);
+}
+
+.inventaire-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.inventaire-section {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+.inventaire-section h2 {
+  margin-bottom: 1rem;
+  color: #f0a6ca;
+}
+.inventaire-section .cartes-liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.inventaire-section .cartes-liste .carte {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  transition: 0.3s;
+}
+.inventaire-section .cartes-liste .carte:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+.inventaire-section .cartes-liste .carte .titre {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.inventaire-section .cartes-liste .carte .statut {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}/*# sourceMappingURL=inventaire.css.map */

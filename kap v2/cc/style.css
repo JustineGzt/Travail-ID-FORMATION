@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 2vh;
+}
+
+.red{
+    color:#b50000;
+}
+
+img{
+    display: block;
+}
+
+body{
+    background-color: #eff5ef;
+}
+
+main{
+
+}
+
+main nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh;
+    background-color: #000000;
+    color: white;
+
+}
+
+main nav h1{
+
+}
+
+main .carre{
+  height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 9%;
+    top: 7%;
+    background: linear-gradient(90deg, #b50000, #b50000);
+}
+
+main nav div{
+    display: flex;
+    justify-content: space-between;
+    width: 40%; 
+    align-items: center;  
+}
+
+main nav img{
+    width: 25px;
+    height: 25px;
+}
+
+main nav .lidirect{
+    display: flex;
+    align-items: center;
+}
+
+main nav div ul{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: white;
+    align-items: center;
+
+}
+
+main nav div ul li{
+    list-style-type: none;
+}
+
+main nav div ul li a{
+    color: #ffffff;
+    font-weight: 600;
+}
+
+header{
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+main .shop{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: #fff;
+}
+
+.section2{
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main h2{
+
+    /* position: absolute;
+    top: 30%;
+    left: 5%; */
+    color: #ffffff;
+    display: flex;
+    font-size: xxx-large;
+}
+
+main .shopdirect{
+    display: flex;
+}
+
+main .shopdirect p{
+    font-size: x-large;
+    padding-top: 3vh;
+}
+
+main .shopdirect hr{
+    width: 70%;
+    height: 3px;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 90%;
+    left: 25%;
+}
+
+.section2 hr{
+    width: 80%;
+    height: 2px;
+    background-color: rgb(10, 10, 10);
+    border: none;
+}
+
+.section2 img{
+    width: 30%;
+}
+
+.section3{
+    background: url(../img/about-us.jpg);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    padding-left: 10vh;
+}
+
+.section3 h3{
+    font-size: 45px;
+    color: white;
+    display: flex;
+}
+
+.section4 .direction{
+    display: flex;
+}
+
+.section4 img{
+    width: 100%;
+}
+
+.section4 article{
+    width: 50%;
+    padding: 3vh;
+}
+
+.section4 .artinfo{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.section4 h3{
+    font-size: 40px;
+    color: black;
+    display: flex;
+}
+
+.section4 article p{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.collection{
+    background-image: url(../img/best-collection.jpg);
+    padding: 10vh 0;
+
+}
+
+.collectioninfo h4{
+    font-size: 35px;
+    display: flex;
+}
+
+.collectioninfo p{
+    font-size: 20px;
+    width: 35%;
+    text-align: -webkit-center;
+}
+
+.collection .collectioninfo{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10vh;
+    gap: 1vh;
+}
+
+.collection .articledirection{
+    display: flex;
+    justify-content: space-evenly;
+    height: 30vh;
+
+}
+.collection article{
+    background-color: #fff;
+    border: 1px solid black;
+    width: 25%;
+    padding: 3vh;
+    height: 100%;
+    align-content: center;
+}
+
+.collection article p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.expert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 10vh;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+.container2 h5{
+    font-size: 35px;
+    display: flex;
+}
+
+.container2 p{
+    font-size: 20px;
+}
+
+.container3{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2vh;
+}
+
+.container3 img{
+    display: block;
+    width: 20%;
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+    padding: 0vh 10vh;
+}
+
+footer .infobloc{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-items: stretch;
+
+}
+
+footer .infofooter{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 0;
+    width: 30%;
+
+}
+
+footer h6{
+    font-size: 30px;
+    text-decoration: underline #b50000;
+    padding-bottom: 5vh;
+}
+
+footer .socials{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li{
+    padding: 2vh 0 2vh 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+footer .infofooter ul i{
+  width: 40px;     /* taille de l’icône */
+  height: 40px;
+  stroke-width: 1.5; /* épaisseur du trait */
+}
+
+footer .infofooter ul svg {
+  width: 40px;
+  height: 40px;
+  stroke-width: 1.5;
+  color: white; /* ou une autre couleur */
+}
+
+footer .pred{
+    display: flex;
+    color: #b50000;
+    justify-content: center;
+}
